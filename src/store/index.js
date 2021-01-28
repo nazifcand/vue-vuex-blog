@@ -83,17 +83,37 @@ export default createStore({
       newData.vote++;
 
       axios.put(`/posts/${id}`, newData)
-        .then(result => context.dispatch('topRatingPosts'))
+        .then(result => {
+          context.dispatch('topRatingPosts');
+          context.dispatch('fetchDatabase');
+        })
         .catch(err => console.log(err));
     },
+
     disLikePost(context, id) {
       const newData = context.state.singlePost;
       if (newData.vote > 0) {
         newData.vote--;
         axios.put(`/posts/${id}`, newData)
-          .then(result => context.dispatch('topRatingPosts'))
+          .then(result => {
+            context.dispatch('topRatingPosts');
+            context.dispatch('fetchDatabase');
+          })
           .catch(err => console.log(err));
       }
+    },
+
+    addPost(context, data) {
+      data['vote'] = 0;
+
+      return new Promise((resolve, reject) => {
+        axios.post('/posts', data)
+          .then(result => {
+            resolve(result.data);
+          })
+          .catch(err => console.log(err))
+      })
+
     }
   }
 })

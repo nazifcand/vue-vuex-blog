@@ -1,7 +1,7 @@
 <template>
   <div class="post">
     <a :href="getUri" class="post-image">
-      <img :src="thumbnail.large" />
+      <img :src="thumbnail" />
     </a>
     <div class="post-contents">
       <a :href="getUri" class="post-title">
@@ -21,7 +21,7 @@ export default {
     title: { type: String, required: true },
     vote: { type: Number, required: true },
     postId: { type: Number, required: true },
-    thumbnail: { type: Object, required: true }
+    thumbnail: { type: String, required: true }
   },
   methods: {
     randomHex() {

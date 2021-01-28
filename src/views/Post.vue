@@ -4,12 +4,11 @@
       <!-- #post start -->
       <div id="post">
         <div class="postImage" v-if="singlePost.thumbnail">
-          <img :src="singlePost.thumbnail.large" />
+          <img :src="singlePost.thumbnail" />
         </div>
         <h1 class="post-title">{{ singlePost.title }}</h1>
-        <p v-for="(desc, key) in singlePost.description" :key="key">
-          {{ desc }}
-        </p>
+
+        <div class="post-description" v-html="singlePost.description"></div>
 
         <!-- #comments start -->
         <div id="comments">
@@ -56,7 +55,7 @@
               :href="getPostLink(post.id)"
               class="post"
             >
-              <img :src="post.thumbnail.small" />
+              <img :src="post.thumbnail" />
               <h3>{{ post.title }}</h3>
               <span>{{ post.vote }}</span>
             </a>
@@ -95,7 +94,7 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss" >
 #single-post {
   display: flex;
   margin-bottom: 50px;
@@ -120,11 +119,13 @@ export default {
     }
   }
 
-  p {
-    color: #777;
+  .post-description {
+    p {
+      color: #777;
 
-    &:not(:last-child) {
-      margin-bottom: 15px;
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
     }
   }
 

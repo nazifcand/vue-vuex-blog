@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <div class="page-title">Top Rating</div>
+    <div class="page-title">Top Ratings({{ topRatingPosts.length }})</div>
     <PostItem
       v-for="post in topRatingPosts"
       :key="post.id"
