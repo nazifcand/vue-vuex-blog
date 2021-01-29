@@ -9,9 +9,9 @@
       :thumbnail="post.thumbnail"
       :vote="post.vote"
       >{{
-        post.description[0].length > 255
-          ? post.description[0].substr(0, 255) + "..."
-          : post.description[0]
+        post.description.length > 255
+          ? post.description.replace(/(<([^>]+)>)/gi, "").substr(0, 310) + "..."
+          : post.description.replace(/(<([^>]+)>)/gi, "")
       }}</PostItem
     >
   </div>

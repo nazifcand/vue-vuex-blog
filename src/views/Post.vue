@@ -49,16 +49,16 @@
           <div class="widget-title">Top Rating</div>
           <div class="widget-content">
             <!-- .post start -->
-            <a
+            <router-link
               v-for="post in topRatingPosts"
               :key="post.id"
-              :href="getPostLink(post.id)"
+              :to="{ name: 'Post', params: { id: post.id, title: post.title } }"
               class="post"
             >
               <img :src="post.thumbnail" />
               <h3>{{ post.title }}</h3>
               <span>{{ post.vote }}</span>
-            </a>
+            </router-link>
             <!-- .post end -->
           </div>
         </div>
@@ -77,16 +77,32 @@ import { mapGetters } from 'vuex';
 export default {
   components: { CommentItem, NewComment },
   created() {
-    this.$store.dispatch('getSinglePost', this.$route.params.id);
+    this.fetchData();
   },
+
+  watch: {
+    $route(to, from) {
+      if (to.name === 'Post' && from.params.id !== to.params.id) {
+        this.fetchData();
+      }
+    },
+  },
+
   computed: {
     ...mapGetters(['topRatingPosts', 'singlePost', 'getPostComments']),
   },
+
   methods: {
+    fetchData() {
+      this.$store.dispatch('getSinglePost', this.$route.params.id);
+    },
+
     getPostLink(id) { return `/post/${id}` },
+
     likePost() {
       this.$store.dispatch('likePost', this.$route.params.id);
     },
+
     disLikePost() {
       this.$store.dispatch('disLikePost', this.$route.params.id);
     }

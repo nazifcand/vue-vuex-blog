@@ -14,7 +14,7 @@
       "description": "<p>Corby, Piranha ve Aden gibi drone üreticileri, fiyat/performans modelleri ile dikkat çekiyor. Özellikle içerik üreticileri drone görüntüleri kullanarak videolarını eşsiz hale getiriyor. Sizler için 2.000 TL altı en iyi drone modelleri listesi hazırladık.</p><p>Drone denilince akla ilk gelen firmalardan biri olan DJI, hem son kulllanıcı hem de endüstriyel kullanım için drone üretiyor. Başlangıç seviyesinde olan kişiler için biçilmiş kaftan olan DJI Tello, 13 dakikalık uçuş süresi sunuyor. Açık havada yaklaşık 100 metre kumanda mesafesi sunabilen cihazda 5 Megapiksel kamera bulunuyor.</p><p>360 derece takla, otomatik eve dönüş ve sesli komut gibi özelliklere sahip olan Aden E58, tam bir fiyat/performans ürünü. Katlanabilir kanatları sayesinde kompakt tasarım ile karşımıza çıkan model, 90 derece hareket edebilen 720p kameraya sahip. Hava koşullarına bağlı olarak yaklaşık 7 ile 8 dakika arasında uçuş imkanı sunan cihaz beklentileri fazlasıyla karşılıyor.</p><p>Aden Z4, 90 derece hareket edebilen gimball teknolojisine ve EIS (elektronik görüntü sabitleme) teknolojisine sahip 4K kameraya sahip. 2.000 TL altı en iyi drone modelleri arasında en yüksek fiyata sahip olan cihaz, Tap Fly modu sayesinde belirlenen rotayı otomatik olarak takip edebiliyor. 7.6V 3.400 mAh batarya ile yaklaşık 22 dakika uçuş süresi sunan model, 5.8 GHz WiFi teknolojisi ile haberleşiyor.</p>",
       "thumbnail": "https://static.shiftdelete.net/wp-content/uploads/2021/01/2000-tl-alti-en-iyi-drone-modelleri.jpg",
       "source": "https://shiftdelete.net",
-      "vote": 0
+      "vote": 1
     },
     {
       "id": 3,
@@ -93,7 +93,7 @@
       "description": "<p>Epic Games, 2020 yılı içerisinde pek çok oyun dağıttı. GTA V, Rocket League, Just Cause 4 gibi popüler oyunlar, bu sene şirketin ücretsiz yaptığı oyunlardan sadece birkaçı. 2021 yılında da şirket, her hafta oyunculara ücretsiz oyun dağıtmaya devam ediyor.</p>\n\n<p>Hatta bugün, Dandara: Trials of Fear Edition ücretsiz oldu. Peki şirketin verdiği bu ücretsiz oyunların toplam maliyeti ne kadar? Şirket, bu oyuncu dostu kampanyaları ile kaç kullanıcıya ulaştı?</p>\n\n<p>Epic Games‘in kendi sitesinde paylaşılan bir blog yazısı, şirketin 2020 yılını inceliyor. 2020 yılında yapılan çalışmaların sonucu olarak, yıl sonunda şirketin ne kadar büyümeye gittiğini gösteren çeşitli infografikler paylaşıldı.</p>\n\n<p>Geçtiğimiz 2019 yılının sonunda toplamda 108 milyon oyuncuya ulaşabilen Epic Games, 2020 yılı sonunda toplamda 160 milyondan fazla oyuncuya ulaşmış durumda. Bu 160 milyon oyuncunun ise mağazada toplamda 700 milyon dolardan daha fazla harcama yaptığı söyleniyor. Yapılan bu 700 milyon dolarlık harcamanın %37‘lik kısmının, yani 265 milyon dolarının üçüncü parti oyunlara gittiği belirtildi.</p>",
       "thumbnail": "https://static.shiftdelete.net/wp-content/uploads/2021/01/Epic-Games-Store-2020-%C3%96zeti-SDN-Shiftdelete.png",
       "source": "https://shiftdelete.net/",
-      "vote": 0,
+      "vote": 5,
       "id": 12
     },
     {
@@ -101,9 +101,16 @@
       "description": "<p>ABD merkezli uzay turizmi şirketi Axiom Space, dört kişiden oluşan bir mürettebatı Ocak 2022’den önce sekiz günlük bir konaklama için Uluslararası Uzay İstasyonu’na (ISS) göndereceğini açıkladı. Bu eşsiz yolculuğun bedeli ise kişi başı tam 55 milyon dolar.</p>\n\n<p>İnsanoğlunun uzaydaki evi olan Uluslararası Uzay İstasyonu (ISS), kapılarını özel vatandaşlara açmaya hazırlanıyor. Merkezi Houston, Teksas’ta bulunan uzay turizmi şirketi Axiom Space, dört kişiden oluşan bir mürettebatı sekiz günlüğüne ISS’ye göndereceğini açıkladı.</p>\n\n<p>Firma, Ocak 2022’den önce gerçekleşecek olan bu konaklamanın kişi başı 55 milyon dolara yani güncel kur ile 405 milyon 834 bin liraya mal olacağını belirtti. Ekipte, Axiom Space’in başkan yardımcısı ve eski NASA astronotu Michael López-Alegría, Amerikalı girişimci Larry Connor, Kanadalı yatırımcı ve hayırsever Mark Pathy ve İsrail’den girişimci Eytan Stibbe bulunuyor.</p>",
       "thumbnail": "https://static.shiftdelete.net/wp-content/uploads/2021/01/uluslararas%C4%B1-uzay-istasyonu.jpg",
       "source": "https://shiftdelete.net/",
-      "vote": 0,
+      "vote": 1,
       "id": 13
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "postId": 7,
+      "date": 1611915077494,
+      "comment": "selam",
+      "id": 1
+    }
+  ]
 }

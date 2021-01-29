@@ -1,12 +1,18 @@
 <template>
   <div class="post">
-    <a :href="getUri" class="post-image">
+    <router-link
+      :to="{ name: 'Post', params: { id: postId, title: title } }"
+      class="post-image"
+    >
       <img :src="thumbnail" />
-    </a>
+    </router-link>
     <div class="post-contents">
-      <a :href="getUri" class="post-title">
+      <router-link
+        :to="{ name: 'Post', params: { id: postId, title: title } }"
+        class="post-title"
+      >
         <h1>{{ title }}</h1>
-      </a>
+      </router-link>
       <p class="post-description"><slot /></p>
       <div class="post-vote-count">
         Oylama: <strong>{{ vote }}</strong>
