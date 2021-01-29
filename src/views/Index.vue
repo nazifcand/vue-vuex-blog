@@ -2,32 +2,18 @@
   <div id="posts">
     <div class="container">
       <div class="page-title">All Posts({{ posts.length }})</div>
-
-      <PostItem
-        v-for="post in posts"
-        :key="post.id"
-        :title="post.title"
-        :postId="post.id"
-        :thumbnail="post.thumbnail"
-        :vote="post.vote"
-        >{{
-          post.description.length > 255
-            ? post.description.replace(/(<([^>]+)>)/gi, "").substr(0, 310) +
-              "..."
-            : post.description.replace(/(<([^>]+)>)/gi, "")
-        }}</PostItem
-      >
+      <listPosts :posts="posts" />
     </div>
   </div>
 </template>
 
 <script>
-import PostItem from '@/components/PostItem.vue';
+import listPosts from '@/components/listPosts.vue';
 import { mapState } from 'vuex';
 
 export default {
   components: {
-    PostItem
+    listPosts
   },
   computed: {
     ...mapState(['posts'])

@@ -1,21 +1,31 @@
 <template>
-  <div class="post">
+  <div class="post" v-for="post in posts" :key="post.id">
     <router-link
-      :to="{ name: 'Post', params: { id: postId, title: title } }"
+      :to="{ name: 'Post', params: { id: post.id, title: post.title } }"
       class="post-image"
     >
-      <img :src="thumbnail" />
+      <img :src="post.thumbnail" />
     </router-link>
+
     <div class="post-contents">
       <router-link
-        :to="{ name: 'Post', params: { id: postId, title: title } }"
+        :to="{ name: 'Post', params: { id: post.id, title: post.title } }"
         class="post-title"
       >
-        <h1>{{ title }}</h1>
+        <h1>{{ post.title }}</h1>
       </router-link>
-      <p class="post-description"><slot /></p>
+
+      <p class="post-description">
+        {{
+          post.description.length > 255
+            ? post.description.replace(/(<([^>]+)>)/gi, "").substr(0, 310) +
+              "..."
+            : post.description.replace(/(<([^>]+)>)/gi, "")
+        }}
+      </p>
+
       <div class="post-vote-count">
-        Oylama: <strong>{{ vote }}</strong>
+        Oylama: <strong>{{ post.vote }}</strong>
       </div>
     </div>
   </div>
@@ -24,20 +34,7 @@
 <script>
 export default {
   props: {
-    title: { type: String, required: true },
-    vote: { type: Number, required: true },
-    postId: { type: Number, required: true },
-    thumbnail: { type: String, required: true }
-  },
-  methods: {
-    randomHex() {
-      return Math.floor(Math.random() * 16777215).toString(16);;
-    }
-  },
-  computed: {
-    getUri() {
-      return `/post/${this.postId}`
-    },
+    posts: { type: Object, required: true }
   }
 }
 </script>
